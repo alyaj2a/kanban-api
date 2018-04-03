@@ -1,0 +1,47 @@
+# Use the .env file to define environment variables.
+
+version: '3.1'
+
+services:
+  nginx:
+    image: nginx
+    container_name: "${APP_NAME}-nginx"
+    ports:
+      - "${APP_PORT}:80"
+    volumes:
+      - ./:/drupal/app
+      - ./docker/drupal.conf:/etc/nginx/conf.d/default.conf
+    links:
+      - php
+
+  php:
+    image: php-drupal
+    build: ./docker
+    container_name: "${APP_NAME}-php"
+    volumes:
+      - ./:/drupal/app
+    links:
+      - database
+
+  database:
+    image: mysql:5.6
+    container_name: "${APP_NAME}-mysql"
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: "${MYSQL_DATABASE}"
+      MYSQL_USER: "${MYSQL_USER}"
+      MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+    volumes:
+      - $PWD/.mysql/:/var/lib/mysql
+
+  # varnish:
+  #   image: wodby/drupal-varnish
+  #   container_name: "${APP_NAME}-varnish"
+  #   ports:
+  #     - "80:6081"
+  #   depends_on:
+  #     - nginx
+  #   environment:
+  #     VARNISH_BACKEND_HOST: "nginx"

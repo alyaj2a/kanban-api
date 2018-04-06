@@ -1,0 +1,15 @@
+entity.board_entity.add_form:
+  route_name: entity.board_entity.add_form
+  title: 'Add Board entity'
+  appears_on:
+    - entity.board_entity.collection
+entity.column_entity.add_form:
+  route_name: entity.column_entity.add_form
+  title: 'Add Column entity'
+  appears_on:
+    - entity.column_entity.collection
+entity.task_entity.add_form:
+  route_name: entity.task_entity.add_form
+  title: 'Add Task entity'
+  appears_on:
+    - entity.task_entity.collection

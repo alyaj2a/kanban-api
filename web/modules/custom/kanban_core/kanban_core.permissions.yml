@@ -1,0 +1,57 @@
+add board entity entities:
+  title: 'Create new Board entity entities'
+
+administer board entity entities:
+  title: 'Administer Board entity entities'
+  description: 'Allow to access the administration form to configure Board entity entities.'
+  restrict access: true
+
+delete board entity entities:
+  title: 'Delete Board entity entities'
+
+edit board entity entities:
+  title: 'Edit Board entity entities'
+
+view published board entity entities:
+  title: 'View published Board entity entities'
+
+view unpublished board entity entities:
+  title: 'View unpublished Board entity entities'
+add column entity entities:
+  title: 'Create new Column entity entities'
+
+administer column entity entities:
+  title: 'Administer Column entity entities'
+  description: 'Allow to access the administration form to configure Column entity entities.'
+  restrict access: true
+
+delete column entity entities:
+  title: 'Delete Column entity entities'
+
+edit column entity entities:
+  title: 'Edit Column entity entities'
+
+view published column entity entities:
+  title: 'View published Column entity entities'
+
+view unpublished column entity entities:
+  title: 'View unpublished Column entity entities'
+add task entity entities:
+  title: 'Create new Task entity entities'
+
+administer task entity entities:
+  title: 'Administer Task entity entities'
+  description: 'Allow to access the administration form to configure Task entity entities.'
+  restrict access: true
+
+delete task entity entities:
+  title: 'Delete Task entity entities'
+
+edit task entity entities:
+  title: 'Edit Task entity entities'
+
+view published task entity entities:
+  title: 'View published Task entity entities'
+
+view unpublished task entity entities:
+  title: 'View unpublished Task entity entities'

@@ -1,0 +1,66 @@
+# Board entity routing definition
+board_entity.settings_tab:
+  route_name: board_entity.settings
+  title: 'Settings'
+  base_route: board_entity.settings
+
+entity.board_entity.canonical:
+  route_name: entity.board_entity.canonical
+  base_route: entity.board_entity.canonical
+  title: 'View'
+
+entity.board_entity.edit_form:
+  route_name: entity.board_entity.edit_form
+  base_route: entity.board_entity.canonical
+  title: 'Edit'
+
+entity.board_entity.delete_form:
+  route_name:  entity.board_entity.delete_form
+  base_route:  entity.board_entity.canonical
+  title: Delete
+  weight: 10
+
+# Column entity routing definition
+column_entity.settings_tab:
+  route_name: column_entity.settings
+  title: 'Settings'
+  base_route: column_entity.settings
+
+entity.column_entity.canonical:
+  route_name: entity.column_entity.canonical
+  base_route: entity.column_entity.canonical
+  title: 'View'
+
+entity.column_entity.edit_form:
+  route_name: entity.column_entity.edit_form
+  base_route: entity.column_entity.canonical
+  title: 'Edit'
+
+entity.column_entity.delete_form:
+  route_name:  entity.column_entity.delete_form
+  base_route:  entity.column_entity.canonical
+  title: Delete
+  weight: 10
+
+# Task entity routing definition
+task_entity.settings_tab:
+  route_name: task_entity.settings
+  title: 'Settings'
+  base_route: task_entity.settings
+
+entity.task_entity.canonical:
+  route_name: entity.task_entity.canonical
+  base_route: entity.task_entity.canonical
+  title: 'View'
+
+entity.task_entity.edit_form:
+  route_name: entity.task_entity.edit_form
+  base_route: entity.task_entity.canonical
+  title: 'Edit'
+
+entity.task_entity.delete_form:
+  route_name:  entity.task_entity.delete_form
+  base_route:  entity.task_entity.canonical
+  title: Delete
+  weight: 10
+

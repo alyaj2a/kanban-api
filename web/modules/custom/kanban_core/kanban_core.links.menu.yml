@@ -1,0 +1,42 @@
+
+# Board entity menu items definition
+entity.board_entity.collection:
+  title: 'Board entity list'
+  route_name: entity.board_entity.collection
+  description: 'List Board entity entities'
+  parent: system.admin_structure
+  weight: 100
+
+board_entity.admin.structure.settings:
+  title: 'Board entity settings'
+  description: 'Configure Board entity entities'
+  route_name: board_entity.settings
+  parent: system.admin_structure
+
+# Column entity menu items definition
+entity.column_entity.collection:
+  title: 'Column entity list'
+  route_name: entity.column_entity.collection
+  description: 'List Column entity entities'
+  parent: system.admin_structure
+  weight: 100
+
+column_entity.admin.structure.settings:
+  title: 'Column entity settings'
+  description: 'Configure Column entity entities'
+  route_name: column_entity.settings
+  parent: system.admin_structure
+
+# Task entity menu items definition
+entity.task_entity.collection:
+  title: 'Task entity list'
+  route_name: entity.task_entity.collection
+  description: 'List Task entity entities'
+  parent: system.admin_structure
+  weight: 100
+
+task_entity.admin.structure.settings:
+  title: 'Task entity settings'
+  description: 'Configure Task entity entities'
+  route_name: task_entity.settings
+  parent: system.admin_structure

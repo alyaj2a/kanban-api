@@ -1,0 +1,5 @@
+name: 'Kanban core'
+type: module
+description: 'This module provides board, columns and tasks entities to the application.'
+core: 8.x
+package: 'Kanban'

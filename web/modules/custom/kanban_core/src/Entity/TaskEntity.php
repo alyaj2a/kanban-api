@@ -235,6 +235,56 @@ class TaskEntity extends ContentEntityBase implements TaskEntityInterface {
         ->setDisplayConfigurable('view', TRUE)
         ->setRequired(TRUE);
 
+    $fields['board_id'] = BaseFieldDefinition::create('entity_reference')
+      ->setLabel(t('Board'))
+      ->setDescription(t('The board ID of the Task entity.'))
+      ->setRevisionable(TRUE)
+      ->setSetting('target_type', 'board_entity')
+      ->setSetting('handler', 'default')
+      ->setTranslatable(TRUE)
+      ->setDisplayOptions('view', [
+        'label' => 'hidden',
+        // 'type' => 'board',
+        'weight' => 0,
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'entity_reference_autocomplete',
+        'weight' => 5,
+        'settings' => [
+          'match_operator' => 'CONTAINS',
+          'size' => '60',
+          'autocomplete_type' => 'tags',
+          'placeholder' => '',
+        ],
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
+    $fields['column_id'] = BaseFieldDefinition::create('entity_reference')
+      ->setLabel(t('Column'))
+      ->setDescription(t('The column ID of the Task entity.'))
+      ->setRevisionable(TRUE)
+      ->setSetting('target_type', 'column_entity')
+      ->setSetting('handler', 'default')
+      ->setTranslatable(TRUE)
+      ->setDisplayOptions('view', [
+        'label' => 'hidden',
+        // 'type' => 'board',
+        'weight' => 0,
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'entity_reference_autocomplete',
+        'weight' => 6,
+        'settings' => [
+          'match_operator' => 'CONTAINS',
+          'size' => '60',
+          'autocomplete_type' => 'tags',
+          'placeholder' => '',
+        ],
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
     $fields['status'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Publishing status'))
       ->setDescription(t('A boolean indicating whether the Task entity is published.'))

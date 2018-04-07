@@ -27,7 +27,7 @@ services:
     image: mysql:5.6
     container_name: "${APP_NAME}-mysql"
     ports:
-      - "3306:3306"
+      - "${MYSQL_PORT}:3306"
     environment:
       MYSQL_DATABASE: "${MYSQL_DATABASE}"
       MYSQL_USER: "${MYSQL_USER}"

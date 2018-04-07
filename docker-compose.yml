@@ -21,7 +21,7 @@ services:
     volumes:
       - ./:/drupal/app
     links:
-      - database
+      - "database:${MYSQL_HOSTNAME}"
 
   database:
     image: mysql:5.6
